@@ -1,0 +1,8 @@
+<p>formulari works!</p>
+<form [formGroup]="criteriForm" (ngSubmit)="onSubmit(criteriForm)">
+    <input mdbInput type="number" id="form1" class="form-control" />
+    <label mdbLabel class="form-label" for="form1">Nota</label>
+    <input mdbInput type="text" id="form2" class="form-control" />
+    <label mdbLabel class="form-label" for="form2">Text</label>
+    <button type="submit">Envia</button>
+</form>
