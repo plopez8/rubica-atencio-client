@@ -73,9 +73,9 @@ export class FormulariComponent implements OnInit {
     }
   }
 
-  comprobarpocision() {
-    this.valoracioForm.controls['nota'].value;
-  }
+
+
+
 
   añadirvaloracion() {
     let nota = this.valoracioForm.controls['nota'].value;

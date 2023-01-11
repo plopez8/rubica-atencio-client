@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 import { Criteri } from '../../Model/Entitats/Implementations/Criteri/Criteri';
 import { Formulari } from '../../Model/Entitats/Implementations/Formulari/Formulari';
 import { Valoracio } from '../../Model/Entitats/Implementations/Valoracio/Valoracio';
