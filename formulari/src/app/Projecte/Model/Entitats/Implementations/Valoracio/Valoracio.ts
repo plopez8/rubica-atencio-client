@@ -10,4 +10,5 @@ export class Valoracio implements IValoracio {
         this.descripcio = descripcio;
         this.seleccionat = false;
     }
+
 }

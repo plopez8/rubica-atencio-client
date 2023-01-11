@@ -1,23 +1,26 @@
-<p>formulari works!</p>
-
-<!-- <form [formGroup]="criteriForm" (ngSubmit)="onSubmit(criteriForm)">
-    <input mdbInput type="number" id="form1" class="form-control" />
-    <label mdbLabel class="form-label" for="form1">Nota</label>
-    <input mdbInput type="text" id="form2" class="form-control" />
-    <label mdbLabel class="form-label" for="form2">Text</label>
-    <button type="submit">Envia</button>
-</form> -->
-
+<p>Afegir criteri:</p>
 <form [formGroup]="criteriForm" (ngSubmit)="onSubmitCriteri()">
     <label for="criteri">Criteri:</label><br>
-    <input type="text" id="criteri" name="criteri" formControlName="criteri"><br>
+    <input type="text" id="criteri" name="criteri" formControlName="titol"><br>
     <button type="submit">Enviar</button>
 </form>
 
-<form [formGroup]="criteriForm" (ngSubmit)="onSubmitValoracio()">
+<br>
+<p>Afegir al criteri les seguents valoracions:</p>
+<div>
+<div style="display: flex; max-height: 30px; " *ngFor="let valoracion of this.valoracions">
+    <p>Nota:{{valoracion.nota}}    Descripcio:{{valoracion.descripcio}} </p>
+      
+</div>
+</div>
+<br>
+
+<p>Afegir valoracions:</p>
+
+<form [formGroup]="valoracioForm" (ngSubmit)="onSubmitValoracio()">
     <label for="nota">Nota:</label><br>
     <input type="number" id="nota" name="nota" formControlName="nota"><br>
-    <label for="descripcio">Text:</label><br>
+    <label for="descripcio">Descripcio</label><br>
     <input type="text" id="descripcio" name="descripcio" formControlName="descripcio"><br>
     <button type="submit">Enviar</button>
 </form>

@@ -1,0 +1,21 @@
+<p>{{this.allnotes}}</p>
+<table>
+    <tr>
+        <th>Rubica</th>
+        <th *ngFor="let nota of this.allnotes;">{{nota}}</th>
+    </tr>
+
+    <tr *ngFor="let criteris of this.rubica.criteris">
+        <th>{{criteris.titol}}</th>
+        <td *ngFor="let nota of this.allnotes">
+            <div *ngFor="let valoracio of this.criteris.valoracions" (click)="seleccion(valoracio, criteris)"
+                [ngStyle]="{'background-color': valoracio.seleccionat ? 'red' : 'blue'}">
+                <div *ngIf="valoracio.nota === nota">
+                    <p>{{valoracio.descripcio}}</p>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+<button (click)="mitjana()">Donam la nota final</button>
+<button (click)="eliminar()">Eliminar tots els criteris</button>

@@ -6,6 +6,7 @@ import { ValoracioComponent } from './Projecte/Components/valoracio/valoracio.co
 import { FormulariComponent } from './Projecte/Components/formulari/formulari.component';
 import { CriteriComponent } from './Projecte/Components/criteri/criteri.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TaulaComponent } from './Projecte/Components/taula/taula.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     ValoracioComponent,
     FormulariComponent,
-    CriteriComponent
+    CriteriComponent,
+    TaulaComponent
 
   ],
   imports: [
