@@ -9,7 +9,7 @@
         <th>{{criteris.titol}}</th>
         <td *ngFor="let nota of this.allnotes">
             <div *ngFor="let valoracio of this.criteris.valoracions" (click)="seleccion(valoracio, criteris)"
-                [ngStyle]="{'background-color': valoracio.seleccionat ? 'red' : 'blue'}">
+                [ngStyle]="{'background-color': valoracio.seleccionat ? '#60ff00' : '#ffec04'}">
                 <div *ngIf="valoracio.nota === nota">
                     <p>{{valoracio.descripcio}}</p>
                 </div>

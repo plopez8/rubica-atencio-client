@@ -42,6 +42,7 @@ eliminar(){
 }
 
   mitjana(){
+    
     if (localStorage.getItem('rubica') == null) {
       window.alert("falten criteris");
     }else{
@@ -51,17 +52,24 @@ eliminar(){
     totalselect = 0;
     let totalnota: number;
     totalnota = 0;
+    let notamax: number;
+    notamax = 0;
     this.rubica.criteris.forEach(criteri => {
+      let keys = Object.keys(criteri.valoracions);
       criteri.valoracions.forEach(valoracio => {
         if(valoracio.seleccionat === true){
           totalselect++;
           totalnota = totalnota + valoracio.nota
-        }        
+          
+        }
+              
       });
+      notamax = notamax + criteri.valoracions[keys.length - 1].nota;  
     });
     let keys = Object.keys(this.rubica.criteris);
       if(keys.length === totalselect){
-        window.alert("La nota final es un: "+(totalnota/totalselect));
+        let mitjana = totalnota*(10/notamax);
+        window.alert("La nota final es un: "+mitjana.toFixed(2));
       }else{
         window.alert("Falta seleccionar notes");
       }
